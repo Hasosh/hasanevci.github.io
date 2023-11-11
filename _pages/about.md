@@ -12,5 +12,5 @@ I am a Masters student in Computer Science at the University of Stuttgart. I am 
 
 Blogs:
 ------
-- [Learning to Simulate Complex Physics with Graph Networks](https://hasanevci.github.io/posts/2023/11/seminar-blog-post/)
+- [Learning to Simulate Complex Physics with Graph Networks](https://hasosh.github.io/hasanevci.github.io/posts/2023/11/seminar-blog-post/)
 
