@@ -10,7 +10,7 @@ redirect_from:
 
 I am a Masters student in Computer Science at the University of Stuttgart. I am mainly interested in Deep Learning, Natural Language Processing, Reinforcement Learning, Information Security.
 
-Blogs:
+Blog Posts:
 ------
-- [Learning to Simulate Complex Physics with Graph Networks](https://hasosh.github.io/hasanevci.github.io/posts/2023/11/seminar-blog-post/)
+- <a href="https://hasosh.github.io/hasanevci.github.io/posts/2023/11/seminar-blog-post/" style="color: blue;">Learning to Simulate Complex Physics with Graph Networks</a>
 
