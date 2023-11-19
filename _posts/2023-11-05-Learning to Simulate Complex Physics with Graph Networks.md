@@ -426,6 +426,7 @@ Code and data of the GNS framework can be found at this <a href="https://github.
 ## Experimental Domains
 
 tbd.
+
 <img src='https://hasosh.github.io/hasanevci.github.io/images/experiment-domains.png'>
 <!-- <img src='/images/experiment-domains.png'> -->
 
@@ -580,8 +581,10 @@ This formal definition encapsulates the fundamental components of a graph: nodes
 
 The following figure depicts a graph $G=(V,E)$ with the following properties:
 
-- $$V = \{1, 2, 3, 4, 5, 6\}$$
-- $$E = \{(1, 2), (2, 1), (1, 5), (5, 1), (2, 5), (5, 2), (2,3), (3,2), (5,4), (4,5), (3,4), (4,3), (4,6), (6,4)\}$$
+$$
+  V = \{1, 2, 3, 4, 5, 6\} \\ \nonumber
+  E = \{(1, 2), (2, 1), (1, 5), (5, 1), (2, 5), (5, 2), (2,3), (3,2), (5,4), (4,5), (3,4), (4,3), (4,6), (6,4)\}
+$$
 
 Note that $u$ is left out as the example graph does not have any global properties or attributes.
 
