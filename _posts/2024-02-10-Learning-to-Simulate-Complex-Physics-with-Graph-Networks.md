@@ -82,8 +82,6 @@ Have you ever wondered about how to predict the behavior of rigid or fluid parti
   <figcaption><p style="color: grey; font-size: smaller;">Inspired by Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div>
 
-<br><br>
-
 # Introduction
 ------
 
