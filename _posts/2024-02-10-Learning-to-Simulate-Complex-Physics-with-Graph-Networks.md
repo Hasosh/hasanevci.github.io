@@ -71,7 +71,7 @@ toc: true
   }
 </style>
 
-Have you ever wondered about predicting where rigid or fluid particles will be in the future and how we can use the right models for this task? If so, you're in for an interesting journey!
+Have you ever wondered about how to predict the behavior of rigid or fluid particles and how we can use the right models for this task? If so, you're in for an interesting journey!
 
 <!-- <div style="text-align: center;">
   <img src='/images/intro.png' alt="Introductory example" style="height:240px">
@@ -117,6 +117,7 @@ The paper "Learning to Simulate Complex Physics with Graph Networks" by Sanchez-
 
 
 # Related work
+------
 
 Before delving into their approach's intricacies, it's essential to explore prior work relevant to the context of this paper. The key references are summarized in the following figure.
 
@@ -145,7 +146,7 @@ To summarize, previous work in simulators, particularly SPH and PBD for fluid dy
 
 The following chapters assume knowledge about some terminology, a foundational understanding of graph theory, and familiarity with the Euler integrator. If you require a refresher on these topics, feel free to open the blue info boxes.
 
-# Graph networks (GNs)
+# Graph network (GN)
 ------
 
 Graph Networks (GNs) are a class of neural network architectures designed to handle data with complex relational structures, such as graphs. The fundamental idea behind GNs is to enable neural networks to effectively reason about and process data points that are interconnected, where the relationships among these data points are critical for understanding the underlying patterns.
@@ -592,7 +593,7 @@ A detailed list of all the experimental domains and their further specifications
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div>
 
-If you want to see pretty rollout videos of the above experiments, click <a href="https://sites.google.com/view/learning-to-simulate" style="color: blue;">here</a>.
+If you want to see pretty rollout videos of the experiments above, click <a href="https://sites.google.com/view/learning-to-simulate" style="color: blue;">here</a>.
 
 ## Key architectural choices
 
