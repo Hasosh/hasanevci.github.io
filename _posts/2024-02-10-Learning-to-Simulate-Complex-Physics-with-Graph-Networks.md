@@ -74,11 +74,11 @@ toc: true
 Have you ever wondered about how to predict the behavior of rigid or fluid particles and how we can use the right models for this task? If so, you're in for an interesting journey!
 
 <!-- <div style="text-align: center;">
-  <img src='/images/intro.png' alt="Introductory example" style="height:240px">
+  <img src='/images/intro.png' style="height:240px">
   <figcaption><p style="color: grey; font-size: smaller;">Inspired by Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src='https://hasosh.github.io/hasanevci.github.io/images/intro.png' alt="Introductory example" style="height:240px">
+  <img src='https://hasosh.github.io/hasanevci.github.io/images/intro.png' style="height:auto; width:70%;">
   <figcaption><p style="color: grey; font-size: smaller;">Inspired by Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div>
 
@@ -87,7 +87,7 @@ Have you ever wondered about how to predict the behavior of rigid or fluid parti
 
 {% include toc %}
 
-Welcome to this blog post where I'll provide an overview and insights into the paper titled ***'Learning to Simulate Complex Physics with Graph Networks'*** authored by *Sanchez-Gonzalez et al.*, which was presented at the International Conference on Machine Learning (ICML) in 2020. In this paper, the authors delve into the exciting realm of simulating complex physical phenomena using Graph Networks. They explore how this deep learning method can be applied to enhance our understanding and prediction of complex physics, bridging the gap between deep learning and numerical methods.
+Welcome to this blog post, where I'll provide an overview and insights into the paper titled ***'Learning to Simulate Complex Physics with Graph Networks'*** authored by *Sanchez-Gonzalez et al.*, which was presented at the International Conference on Machine Learning (ICML) in 2020. In this paper, the authors delve into the exciting realm of simulating complex physical phenomena using graph networks. They explore how this deep learning method can be applied to enhance our understanding and prediction of complex physics, bridging the gap between deep learning and numerical methods.
 
 As a student passionate about using machine learning to solve problems in the sciences, I find this paper particularly fascinating. It showcases the potential for mathematical concepts and deep learning to synergize, leading to significant advancements in our ability to model and simulate intricate physical systems. This post provides a comprehensive exploration of the paper's key findings and contributions in the context of enhancing our understanding of complex physics through innovative neural network architectures. It also draws inspiration from the <a href="https://www.youtube.com/watch?v=8v27_jzNynM" style="color: blue;">author's talk</a>.
 
@@ -97,21 +97,21 @@ Feel free to explore this post in a way that suits your interests and familiarit
 
 The need for simulating complex physics arises across various scientific and engineering disciplines. These realistic simulators serve as invaluable tools that enable us to gain a profound understanding of intricate physical phenomena. Whether it's designing cutting-edge aerospace technologies, optimizing fluid dynamics in engineering, or unraveling the behavior of biological systems, simulations provide a controlled and accessible environment to explore and experiment. In some situations, they are also very cost-efficient. Consider the example of a car manufacturer assessing vehicle safety. Instead of the costly and resource-intensive process of physically crashing hundreds of cars, simulations offer a more efficient alternative here.
 
-In the absence of such simulations, many scientific inquiries and engineering endeavors would be severely hindered. Complex physics simulations offer the means to predict and visualize the behavior of systems that may be difficult or impossible to study directly. They empower us to test hypotheses, predict outcomes, and optimize designs, ultimately advancing our knowledge and technological capabilities. However, the traditional methods of creating these simulations present significant challenges and limitations.
+Without such simulations, many scientific studies and engineering projects would face major difficulties. Complex physics simulations offer the means to predict and visualize the behavior of systems that may be difficult or impossible to study directly. They empower us to test hypotheses, predict outcomes, and optimize designs, advancing our knowledge and technological capabilities. However, the traditional methods of creating these simulations present significant challenges and limitations.
 
 <span style="font-size: 24px;">What is the problem of traditional simulators?</span>
 
 While the importance of simulating complex physics is undeniable, the traditional approach to building simulators poses several challenges. These conventional simulators can be exceptionally costly, both in terms of time and resources. Developing a simulator often demands years of painstaking engineering effort, from designing accurate models to implementing computational algorithms.
 
-One of the critical issues is the trade-off between generality and accuracy. Traditional simulators tend to excel in specific, narrowly defined settings, sacrificing the ability to adapt to a broader range of scenarios. Moreover, constructing high-quality simulators necessitates substantial computational resources, rendering scalability a formidable hurdle.
+One of the critical issues is the trade-off between generality and accuracy. Traditional simulators tend to excel in specific, narrowly defined settings, sacrificing the ability to adapt to a broader range of scenarios. Moreover, constructing high-quality simulators necessitates substantial computational resources, making it very hard to scale up.
 
-Even the best traditional simulators may fall short due to inherent limitations. Insufficient knowledge of the underlying physics or the complexities of approximating critical parameters can lead to inaccuracies. As a result, there is a compelling need for alternative approaches that can overcome these challenges and revolutionize the way we simulate complex physics. One such alternative is the utilization of machine learning, which has the potential to train simulators directly from observed data. It presents a transformative solution with **learned simulators**, which often have flexible frameworks capable of adapting to a wide array of problems. These simulators are not static; they can be continually refined for better performance and become more accurate as more data is fed into them, allowing for precise predictions and replication of physical phenomena. Among these, Graph Networks stand out for their potential in learned simulators, pointing to a future where simulating complex physics is more efficient and accurate.
+Even the best traditional simulators may fall short due to inherent limitations. Insufficient knowledge of the underlying physics or the complexities of approximating critical parameters can lead to inaccuracies. As a result, there is a compelling need for alternative approaches that can overcome these challenges and revolutionize the way we simulate complex physics. One such alternative is the utilization of machine learning, which has the potential to train simulators directly from observed data. It presents a transformative solution with **learned simulators**, which often have flexible frameworks capable of adapting to a wide range of problems. These simulators are not static; they can be continually refined for better performance and become more accurate as more data is fed into them, allowing for precise predictions and replication of physical phenomena. Among these, **graph networks (GNs)** stand out for their potential in learned simulators, pointing to a future where simulating complex physics is more efficient and accurate.
 
 <span style="font-size: 24px;">How can you simulate complex physics with graph networks?</span>
 
-Simulating complex physics with Graph Networks involves representing physical systems as graphs, with nodes and edges denoting entities and their interactions. GNs excel in capturing the complex relationships and dynamics within these structured data. By training GNs on observed data, they can learn the underlying physics and predict how physical properties evolve over time. This adaptability makes GNs a powerful tool for simulating a wide range of complex physical phenomena, from fluid dynamics to structural mechanics, without relying on predefined mathematical models. In essence, GNs revolutionize complex physics simulation by leveraging the flexibility and capacity of machine learning within the framework of graph-like representations.
+Simulating complex physics with GNs involves representing physical systems as graphs, with nodes and edges denoting entities and their interactions. GNs excel in capturing the complex relationships and dynamics within these structured data. By training GNs on observed data, they can learn the underlying physics and predict how physical properties evolve over time. This adaptability makes GNs a powerful tool for simulating a wide range of complex physical phenomena, from fluid dynamics to structural mechanics, without relying on predefined mathematical models. In essence, GNs revolutionize complex physics simulation by leveraging the flexibility and capacity of machine learning within the framework of graph-like representations.
 
-The paper "Learning to Simulate Complex Physics with Graph Networks" by Sanchez-Gonzalez et al. significantly advances the application of GNs in simulating complex physics. In their pioneering work, the authors propose a novel Graph Network-based Simulation (GNS) framework that utilizes the inherent graph-like nature of physical systems. The GNS framework leverages GNs to represent physical entities and their interactions as nodes and edges within the graph, enabling the network to grasp the intricate relationships and dependencies that define complex physical phenomena. 
+The paper "Learning to Simulate Complex Physics with Graph Networks" by Sanchez-Gonzalez et al. significantly advances the application of GNs in simulating complex physics. In their work, the authors propose a novel Graph Network-based Simulation (GNS) framework that utilizes the graph-like nature of physical systems. The GNS framework leverages GNs to represent physical entities and their interactions as nodes and edges within the graph, enabling the network to grasp the intricate relationships and dependencies that define complex physical phenomena. 
 
 
 # Related work
@@ -120,11 +120,11 @@ The paper "Learning to Simulate Complex Physics with Graph Networks" by Sanchez-
 Before delving into their approach's intricacies, it's essential to explore prior work relevant to the context of this paper. The key references are summarized in the following figure.
 
 <!-- <div style="text-align: center;">
-  <img src="/images/related-work.png" alt="Graph Example" style="height: 250px;">
+  <img src="/images/related-work.png" style="height: 250px;">
   <figcaption><p style="color: grey; font-size: smaller;">Source: Created by myself</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src="https://hasosh.github.io/hasanevci.github.io/images/related-work.png" alt="Graph Example" style="height: 250px;">
+  <img src="https://hasosh.github.io/hasanevci.github.io/images/related-work.png" style="height:auto; width:90%;">
   <figcaption><p style="color: grey; font-size: smaller;">Source: Created by myself</p></figcaption>
 </div>
 
@@ -171,11 +171,11 @@ Graph Networks (GNs) are a class of neural network architectures designed to han
     \end{align*}
   $$
   <!-- <div style="text-align: center;">
-    <img src="/images/graph-3tuple.png" alt="Graph Example" style="height: 200px;">
+    <img src="/images/graph-3tuple.png" style="height: 200px;">
     <figcaption><p style="color: grey; font-size: smaller;">Source: Battaglia et al. (2018)</p></figcaption>
   </div> -->
   <div style="text-align: center;">
-    <img src="https://hasosh.github.io/hasanevci.github.io/images/graph-3tuple.png" alt="Graph Example" style="height: 200px;">
+    <img src="https://hasosh.github.io/hasanevci.github.io/images/graph-3tuple.png" style="height:auto; width:50%;">
     <figcaption><p style="color: grey; font-size: smaller;">Source: Battaglia et al. (2018)</p></figcaption>
   </div>
   </div>
@@ -183,7 +183,7 @@ Graph Networks (GNs) are a class of neural network architectures designed to han
 
 The central concept of GNs is the ability to propagate information across the edges and nodes of a graph. Unlike traditional neural networks that operate on fixed-sized inputs, GNs dynamically adapt to varying graph structures. They achieve this through a series of computation steps that involve message-passing and aggregation. GNs process information at different levels, starting from individual edges and nodes, then aggregating information at higher levels, ultimately leading to a global understanding of the entire graph. The power of GNs lies in their capacity to capture relational inductive biases, making them versatile for various tasks.
 
-The following sections draw from the insights of Battaglia et al.'s (2018) paper *"Relational inductive biases, deep learning, and graph networks"*.
+The following sections about graph networks draw from the insights of Battaglia et al.'s (2018) paper *"Relational inductive biases, deep learning, and graph networks"*.
 
 ## GN block
 
@@ -218,11 +218,11 @@ When a graph, denoted as G, is provided as input to a Graph Neural (GN) block, t
 This sequence of computations is visualized in the following figure, where aggregations are already done implicitly.
 
 <!-- <div style="text-align: center;">
-  <img src='/images/GN-updates.png' alt="Image">
+  <img src='/images/GN-updates.png'>
   <figcaption><p style="color: grey; font-size: smaller;">Source: Battaglia et al. (2018)</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src='https://hasosh.github.io/hasanevci.github.io/images/GN-updates.png' alt="Image">
+  <img src='https://hasosh.github.io/hasanevci.github.io/images/GN-updates.png' style="height:auto; width:90%;">
   <figcaption><p style="color: grey; font-size: smaller;">Source: Battaglia et al. (2018)</p></figcaption>
 </div>
 
@@ -231,7 +231,7 @@ It's worth noting that while this sequence of steps is assumed here, the order i
 
 ## Composing multiple GN blocks
 
-GNs revolutionize architecture composition, enabling the seamless assembly of multiple GN blocks into sophisticated structures.This makes the creation of complex, interconnected models possible that can be used for a wide range of tasks. Here's an overview of how multiple GN blocks can be composed:
+GNs revolutionize architecture composition, enabling the seamless assembly of multiple GN blocks into sophisticated structures. This makes the creation of complex, interconnected models possible that can be used for a wide range of tasks. Here's an overview of how multiple GN blocks can be composed:
 
 1. **Basic Composition**: In its simplest form, two GN blocks, $GN_1$ and $GN_2$, can be combined by passing the output of the first block as input to the second, resulting in $G' = GN_2(GN_1(G))$. This allows for the sequential application of GN blocks.
 
@@ -248,7 +248,7 @@ You can see the latter three composition architectures in (a), (b), and (c) of t
   <figcaption><p style="color: grey; font-size: smaller;">Source: Battaglia et al. (2018)</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src='https://hasosh.github.io/hasanevci.github.io/images/GN-types.png'>
+  <img src='https://hasosh.github.io/hasanevci.github.io/images/GN-types.png' style="height:auto; width:90%;">
   <figcaption><p style="color: grey; font-size: smaller;">Source: Battaglia et al. (2018)</p></figcaption>
 </div>
 
@@ -265,7 +265,7 @@ An example of the message passing process is visualized in the following figure:
   <figcaption><p style="color: grey; font-size: smaller;">Source: Battaglia et al. (2018)</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src='https://hasosh.github.io/hasanevci.github.io/images/message-passing-example.png'>
+  <img src='https://hasosh.github.io/hasanevci.github.io/images/message-passing-example.png' style="height:auto; width:90%;">
   <figcaption><p style="color: grey; font-size: smaller;">Source: Battaglia et al. (2018)</p></figcaption>
 </div>
 
@@ -278,6 +278,8 @@ Crucially, if we exclude the global feature (which aggregates information across
 
 The Graph Network-based Simulators (GNS) framework is a machine learning framework designed for simulating complex physical systems involving fluids, rigid solids, and deformable materials interacting with each other. It represents the state of the system as nodes in a graph and computes dynamics using learned message-passing techniques. The framework demonstrates the ability to generalize across different initial conditions, timesteps, and particle quantities during testing, showing robustness to hyperparameter variations. 
 
+The next sections will cover the main idea behind GNS, explain what a learnable simulation means, and describe the framework of the model.
+
 ## Main idea of GNS
 
 The main idea of GNS can be explained with the help of the figure shown below:
@@ -287,7 +289,7 @@ The main idea of GNS can be explained with the help of the figure shown below:
   <figcaption><p style="color: grey; font-size: smaller;">Inspired by Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src='https://hasosh.github.io/hasanevci.github.io/images/GNS_idea.png' style="width: 600px;">
+  <img src='https://hasosh.github.io/hasanevci.github.io/images/GNS_idea.png' style="height:auto; width:80%;">
   <figcaption><p style="color: grey; font-size: smaller;">Inspired by Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div>
 
@@ -387,7 +389,7 @@ Each particle $x_i$ in the physical system can be expressed as a vector. This ve
   <figcaption><p style="color: grey; font-size: smaller;">Source: Created by myself</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src='https://hasosh.github.io/hasanevci.github.io/images/input-representation.png' style="height: 300px;">
+  <img src='https://hasosh.github.io/hasanevci.github.io/images/input-representation.png' style="height:auto; width:60%;">
   <figcaption><p style="color: grey; font-size: smaller;">Source: Created by myself</p></figcaption>
 </div>
 
@@ -408,7 +410,7 @@ The whole architecture of the GNS framework is depicted in the following figure:
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src='https://hasosh.github.io/hasanevci.github.io/images/GNS-framework.png'>
+  <img src='https://hasosh.github.io/hasanevci.github.io/images/GNS-framework.png' style="height:auto; width:90%;">
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div>
 
@@ -442,7 +444,7 @@ These characteristics $r_{i,j}$ can include factors like the displacement betwee
 
 In total, the encoder constructs a locally connected latent graph $G_0$. This means that it adds edges between particles that are within a specific **"connectivity radius"**, denoted as $R$. This radius reflects local interactions among the particles and remains constant for all simulations at the same resolution. Standard nearest neighbor algorithms were employed for this purpose.
 
-Beyond that, the authors tested two different variants of encoders: **absolute** and **relative** encoder. The absolute encoder uses absolute position information of the particles, thus the input to $\varepsilon^v$ is the $x_i$ described above in the input representation. As absolute positions are stored for each input particle, the edge embeddings $\varepsilon^e$ do not carry any valuable information here and were consequently discarded for the absolute encoder. On the other hand, the relative encoder uses relative position information of the particles, i.e. the relative distance to each neighbor of a particle. Therefore, the node embeddings $\varepsilon^v$ ignored position information $p_i$ inside $x_i$ by masking it out. Instead, the edge embeddings utilized the relative positional displacement and its magnitude $r_{i,j} = [(p_i - p_j), \| p_i - p_j\|]$. Lastly, in both version, global properties were always appended to $x_i$ prior to inputting them to $\varepsilon^v$.
+Beyond that, the authors tested two different variants of encoders: **absolute** and **relative encoder**. The absolute encoder uses absolute position information of the particles, thus the input to $\varepsilon^v$ is the $x_i$ described above in the input representation. As absolute positions are stored for each input particle, the edge embeddings $\varepsilon^e$ do not carry any valuable information here and were consequently discarded for the absolute encoder. On the other hand, the relative encoder uses relative position information of the particles, i.e. the relative distance to each neighbor of a particle. Therefore, the node embeddings $\varepsilon^v$ ignored position information $p_i$ inside $x_i$ by masking it out. Instead, the edge embeddings utilized the relative positional displacement and its magnitude $r_{i,j} = [(p_i - p_j), \| p_i - p_j\|]$. Lastly, in both version, global properties were always appended to $x_i$ prior to inputting them to $\varepsilon^v$.
 
 <span style="font-size: 24px;">Processor</span>
 
@@ -476,7 +478,7 @@ Also note that we do not learn a decoder function $\delta^e$ for the edges, sinc
 
 <span style="font-size: 24px;">Multilayer Perceptron (MLP)</span>
 
-Now the question might be: Well how exactly are these embedding functions $\varepsilon^v$ and $\varepsilon^e$ created or learned for the nodes and edges, respectively? Also, how are node and edge embeddings updated in the processor and how is the decoding function $\delta^v$ learned?
+Now one question might be: Well how exactly are these embedding functions $\varepsilon^v$ and $\varepsilon^e$ created or learned for the nodes and edges, respectively? Also, how are node and edge embeddings updated in the processor and how is the decoding function $\delta^v$ learned?
 
 For this purpose, multiple **Multilayer Perceptrons (MLP)** are trained separately i.e. for $\varepsilon^v$, $\varepsilon^e$ and $\delta^v$, a MLP separately. For $\varepsilon^v$ and $\varepsilon^e$, they encode the node features and edge features into latent vectors $v_i$ and $e_{i,j}$ of size 128.
 
@@ -521,7 +523,7 @@ For more detailed information about the dataset, readers are directed to the acc
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src='https://hasosh.github.io/hasanevci.github.io/images/dataset.png' style="width: 600px;">
+  <img src='https://hasosh.github.io/hasanevci.github.io/images/dataset.png' style="height:auto; width:90%;">
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div>
 
@@ -533,23 +535,19 @@ This chapter presents an in-depth examination of the critical training methodolo
 
 2. **Normalization**: All input and target vectors are normalized elementwise to have zero mean and unit variance. This normalization is performed using online statistics computed during training, improving training speed but not significantly affecting the final performance.
 
-3. **Loss Function and Optimization**: The loss function is based on **one-step** $L_2$ **loss**, calculated on predicted per-particle accelerations from sampled particle state pairs $(x_i^{t_k}, x_i^{t_{k+1}})$:
+3. **Loss Function and Optimization**: The loss function is based on **one-step** $L_2$ **loss**, calculated on predicted per-particle accelerations from sampled particle state pairs $(x_i^{t_k}, x_i^{t_{k+1}})$: $ L(x_i^{t_k}, x_i^{t_{k+1}}; \theta) = \|d_{\theta}(x_i^{t_k}) - \ddot{p}_i^{t_k} \|^2 $.
 
-$$ 
-  L(x_i^{t_k}, x_i^{t_{k+1}}; \theta) = \|d_{\theta}(x_i^{t_k}) - \ddot{p}_i^{t_k} \|^2 \nonumber
-$$
-
-4. **Hyperparameters Consistency**: Across the various experiments, a consistent set of hyperparameters is applied. This includes a relative encoder variant, unshared GN parameters in the processor, and 10 steps of message-passing. Again, these hyperparameters are validated through an ablation study.
+4. **Hyperparameters Consistency**: Across the various experiments, a consistent set of hyperparameters is applied. This includes a **relative encoder** variant, **unshared GN parameters** in the processor, and **10 steps of message-passing**. Again, these hyperparameters are validated through an ablation study.
 
 Model parameters are optimized using the Adam optimizer with a small mini-batch size. Training involves up to 20 million gradient update steps with a gradual learning rate decay. This approach maintains consistency across datasets and facilitates fair comparisons across settings.
 
 Model performance is evaluated during training by conducting full-length rollouts on held-out validation trajectories. The training stops when negligible decreases in Mean Squared Error (MSE) are observed. The training duration varies depending on the dataset complexity, ranging from a few hours for simpler datasets to up to a week for more complex ones.
 
-In summary, the training process for complex simulation systems involves strategies such as adding training noise, normalization, specific loss functions, and optimization procedures. Regular evaluation and stopping criteria ensure the models achieve the desired performance.
+In summary, the training process for complex simulation systems involves strategies such as adding training noise, normalization, and common optimization procedures. Regular evaluation and stopping criteria ensure the models achieve the desired performance.
 
 ## GNS' generalization capability: from basic to complex experiments
 
-In the following, we will see an incremental approach, where the GNS model is applied to easy environments first and to more and more complex environments later on.
+In the following, we will see an incremental approach, where the GNS model is applied to easy environments first and to more complex environments later on.
 
 The carried out training experiments are summarized in the following figure:
 
@@ -558,11 +556,11 @@ The carried out training experiments are summarized in the following figure:
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src='https://hasosh.github.io/hasanevci.github.io/images/training-experiments.png' style="height: 400px;">
+  <img src='https://hasosh.github.io/hasanevci.github.io/images/training-experiments.png' style="height:auto; width:80%;">
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div>
 
-First, they trained a separate GNS model for each material (see (a-c)). As can be seen the GNS model simulations of goop, water and sand is almost indistiguishable from the ground truth. Then, the authors increased the difficulty of the environment by adding obstacles to the environment or by mixing different materials in the same environment (see (d-e)). Here, they trained one GNS model in environments with obstacles and multiple materials. The GNS model was capable of simulating materials interacting with complicated static obstacles such as ramps. What stands out even more is that it also simulated the interaction between different materials (e.g. water, sand and goop) quite accurately. This effectively means that the model learned the product space of different interactions (e.g. water-water, water-sand, water-goop, ...).
+First, they trained a separate GNS model for each material (see (a-c)). As can be seen, the GNS model simulations of goop, water and sand is almost indistiguishable from the ground truth. Then, the authors increased the difficulty of the environment by adding obstacles to the environment or by mixing different materials in the same environment (see (d-e)). Here, they trained one GNS model in environments with obstacles and multiple materials. The GNS model was capable of simulating materials interacting with complicated static obstacles such as ramps. What stands out even more is that it also simulated the interaction between different materials (e.g. water, sand and goop) quite accurately. This effectively means that the model learned the product space of different interactions (e.g. water-water, water-sand, water-goop, ...).
 
 Next, we delve into the GNS model's extraordinary capability for **generalization**, a step up in complexity and a true testament to its adaptability. The model, already proficient in handling basic environments and interactions, was now tested in scenarios far beyond its initial training parameters. These more complex outside training experiments are summarized in the next figure:
 
@@ -571,13 +569,13 @@ Next, we delve into the GNS model's extraordinary capability for **generalizatio
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src='https://hasosh.github.io/hasanevci.github.io/images/outside-training-experiments.png' style="height: 400px;">
+  <img src='https://hasosh.github.io/hasanevci.github.io/images/outside-training-experiments.png' style="height:auto; width:65%;">
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div>
 
-In a remarkable demonstration of this generalization, the model, initially trained on the WATERRAMPS scenario (described before), was subjected to a variety of novel and challenging environments (see (f-h)). For instance, in one scenario, instead of having a static body of water, an "inflow" condition was introduced (see (f)). Here, water particles were continuously added during the simulation, significantly increasing the complexity of the task. This dynamic addition of particles resulted in scenarios where the model had to manage up to 28k particles, compared to the 2.5k particles in its training set. Yet, the model excelled, accurately predicting highly chaotic dynamics that were never encountered during its training. The rollouts from these simulations, visually akin to the ground truth, underscored the model's robust generalization capabilities.
+In a remarkable demonstration of this generalization, the model, initially trained on the *WATERRAMPS* scenario (described before), was subjected to a variety of novel and challenging environments (see (f-h)). For instance, in one scenario, instead of having a static body of water, an "inflow" condition was introduced (see (f)). Here, water particles were continuously added during the simulation, significantly increasing the complexity of the task. This dynamic addition of particles resulted in scenarios where the model had to manage up to 28k particles, compared to the 2.5k particles in its training set. Yet, the model excelled, accurately predicting highly chaotic dynamics that were never encountered during its training. The rollouts from these simulations, visually similar to the ground truth, underscored the model's robust generalization capabilities.
 
-But the testing did not stop there. The model's adaptability was further stretched in a much larger domain featuring multiple inflows over a complex arrangement of slides and ramps (see (h)). Here, the test domain was 32 times larger than the training area, and the number of particles increased to 85k. Despite these vast differences, the model's performance remained unflinchingly accurate, handling long simulations that extended eight times the duration of its training scenarios. In a final, rigorous test, the model was applied to a custom domain with varied material inflows and shapes. This not only proved the model's capacity to understand and simulate frictional behavior between different materials but also its incredible ability to adapt to completely novel shapes and dynamics, a feature crucial for practical real-world applications.
+But the testing did not stop there. The model's adaptability was further stretched in a much larger domain featuring multiple inflows over a complex arrangement of slides and ramps (see (h)). Here, the test domain was 32 times larger than the training area, and the number of particles increased to 85k. Despite these vast differences, the model's performance remained very accurate, handling long simulations that extended eight times the duration of its training scenarios. In a final, rigorous test, the model was applied to a custom domain with varied material inflows and shapes. This not only proved the model's capacity to understand and simulate frictional behavior between different materials but also its ability to adapt to completely novel shapes and dynamics, a feature crucial for practical real-world applications.
 
 Through these incremental steps, from basic material simulations to handling multi-material interactions and then to adapting to vastly different and more complex environments, the GNS model has shown an impressive range of capabilities. It's not just a model that simulates physical processes; it's a model that learns, adapts, and excels, even in situations far removed from its initial training grounds.
 
@@ -588,7 +586,7 @@ A detailed list of all the experimental domains and their further specifications
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src='https://hasosh.github.io/hasanevci.github.io/images/experiment-domains.png' style="width: 400px;">
+  <img src='https://hasosh.github.io/hasanevci.github.io/images/experiment-domains.png' style="height:auto; width:50%;">
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div>
 
@@ -610,14 +608,14 @@ However, several factors were identified that significantly influenced the GNS m
 
 5. The choice between the **relative and absolute encoder** showed that the relative version was superior. This preference likely arose from the fact that the underlying physical processes being learned were invariant to spatial position, aligning with the inductive bias imposed through the relative encoder.
 
-These decisions were guided by the experimental results, as illustrated in following figure, which depicts the effect of different ablations against their model on one-step and rollout errors. The bars represent the median seed performance averaged across the entire GOOP test dataset, with error bars displaying lower and higher quartiles for the default parameters.
+These decisions were guided by the experimental results, as illustrated in following figure, which depicts the effect of different ablations against their model on one-step and rollout errors. The bars represent the median seed performance averaged across the entire *GOOP* test dataset, with error bars displaying lower and higher quartiles for the default parameters.
 
 <!-- <div style="text-align: center;">
   <img src='/images/ablation-study.png'>
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src='https://hasosh.github.io/hasanevci.github.io/images/ablation-study.png'>
+  <img src='https://hasosh.github.io/hasanevci.github.io/images/ablation-study.png' style="height:auto; width:90%;">
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div>
 
@@ -625,16 +623,16 @@ These decisions were guided by the experimental results, as illustrated in follo
 
 In their comparison analysis, the researchers contrasted their GNS model with two recent particle-based fluid simulation approaches.
 
-The GNS model was applied to the BOXBATH domain, known from the **dynamic particle interaction network (DPI) from Y. Li et al. (2018)**. Unlike DPI, which required distinct architectures for different simulations and a specialized hierarchical mechanism for rigid particles, the GNS model managed to simulate a rigid box floating in water without any modifications. The GNS's relative encoder and training noise were sufficient to maintain the stiff relative displacements among rigid particles, simplifying the process.
+The GNS model was applied to the *BOXBATH* domain, known from the **dynamic particle interaction network (DPI) from Y. Li et al. (2018)**. Unlike DPI, which required distinct architectures for different simulations and a specialized hierarchical mechanism for rigid particles, the GNS model managed to simulate a rigid box floating in water without any modifications. The GNS's relative encoder and training noise were sufficient to maintain the stiff relative displacements among rigid particles, simplifying the process.
 
-The GNS model was also compared to the convolutional network **(CConv) from Ummenhofer et al. (2020)**, which is specifically tailored for fluid dynamics with distinct features like SPH-like local kernels and different sub-networks for various particle types. While CConv showed proficiency in water simulations, it struggled with more complex materials and preserving the shape of rigid objects in simulations like the BOXBATH domain. In contrast, the GNS model displayed better rollout accuracy across multiple domains without needing such tailored approaches. An example of this observation can be seen here:
+The GNS model was also compared to the convolutional network **(CConv) from Ummenhofer et al. (2020)**, which is specifically tailored for fluid dynamics with distinct features like SPH-like local kernels and different sub-networks for various particle types. While CConv showed proficiency in water simulations, it struggled with more complex materials and preserving the shape of rigid objects in simulations like the *BOXBATH* domain. In contrast, the GNS model displayed better rollout accuracy across multiple domains without needing such tailored approaches. An example of this observation can be seen here:
 
 <!-- <div style="text-align: center;">
   <img src='/images/cconv-comparison.png' style="width: 400px;">
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src='https://hasosh.github.io/hasanevci.github.io/images/cconv-comparison.png' style="width: 400px;">
+  <img src='https://hasosh.github.io/hasanevci.github.io/images/cconv-comparison.png' style="height:auto; width:60%;">
   <figcaption><p style="color: grey; font-size: smaller;">Source: Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div>
 
@@ -642,7 +640,7 @@ Overall, the GNS model demonstrated a more versatile and accurate performance in
 
 ## Further application of the GNS framework
 
-The GNS framework is a versatile tool that can be applied to numerous domains and scenarios, especially where complex interactions and relationships are best represented through graph-based models. While the discourse in this paper primarily centers on the utilization of mesh-free particle methods, it's noteworthy that the versatility of the GNS framework extends to encompass mesh-based methods as well. This expanded application has been explored and presented in a subsequent paper by the same team of authors. For readers seeking to delve deeper, the work titled <a href="https://iclr.cc/virtual/2021/spotlight/3542" style="color: blue;">"Learning Mesh-Based Simulation with Graph Networks"</a>, authored by Tobias Pfaff, represents a significant contribution to the field. The paper made its debut at the esteemed International Conference on Learning Representations (ICLR) in the year 2021, marking a notable advancement in the domain of simulated learning environments.
+The GNS framework is a versatile tool that can be applied to numerous domains and scenarios, especially where complex interactions and relationships are best represented through graph-based models. While the discourse in this paper primarily centers on the utilization of mesh-free particle methods, it's noteworthy that the versatility of the GNS framework extends to encompass mesh-based methods as well. This expanded application has been explored and presented in a subsequent paper by the same team of authors. For readers seeking to delve deeper, the work titled <a href="https://iclr.cc/virtual/2021/spotlight/3542" style="color: blue;">"Learning Mesh-Based Simulation with Graph Networks"</a> by Tobias Pfaff is a key resource. It was presented at the International Conference on Learning Representations (ICLR) in 2021 and offers an expanded application of the GNS framework.
 
 # Discussion
 ------
@@ -651,21 +649,21 @@ This chapter delves into a comprehensive analysis of the study, segmenting our f
 
 ## Why does the GNS framework work so well?
 
-The success of the GNS framework can be significantly attributed to its use of **inductive biases**. As elucidated by Battaglia et al., an "inductive bias allows a learning algorithm to prioritize one solution (or interpretation) over another, independent of the observed data." This is to say, inductive biases guide the learning process, offering a way to inject domain knowledge into the model which helps in generalization, especially when the available data is scarce or noisy.
+The success of the GNS framework can be significantly attributed to its use of **inductive biases**. As elucidated by Battaglia et al. (2018), an "inductive bias allows a learning algorithm to prioritize one solution (or interpretation) over another, independent of the observed data." This is to say, inductive biases guide the learning process, offering a way to inject domain knowledge into the model which helps in generalization, especially when the available data is scarce or noisy.
 
-In the case of the GNS framework, its inductive biases are deeply intertwined with the representation and processing of physical systems which explain its efficacy. The first such bias is the **representation of the physical system as a graph**. This allows the model to inherently consider that particles in close proximity have a more significant influence on each other's behavior. The practical upshot of this is a focused computation, where the algorithm's efforts are concentrated on the interactions that matter most, thus avoiding unnecessary calculations on distant, non-interacting particles.
+In the case of the GNS framework, its inductive biases are deeply intertwined with the representation and processing of physical systems which explain its efficacy. The first such bias is the **representation of the physical system as a graph**. This allows the model to consider that particles in close proximity have a more significant influence on each other's behavior. This leads to a more focused computation, where the algorithm mainly works on the most important interactions and avoids unnecessary calculations on distant particles that don't interact.
 
 Another bias introduced in the GNS framework is the use of **shared node and edge functions**. By treating the dynamics as uniform across all particles, every particle effectively becomes a 'sample' for training the model. This approach not only amplifies the amount of training data, as each particle serves as an observational point, but it also ensures that the learned dynamics are universally applicable across the system, enhancing the model's ability to generalize from limited data.
 
 Lastly, the GNS framework employs **relative encoding**, which posits that the differences in position relative to neighboring particles are sufficient for the model's purposes. This bias towards relative position, rather than absolute coordinates, helps prevent overfitting. By focusing on the relative positions, the model learns to understand and predict the system's dynamics based on local structures and interactions, which are often more generalizable and less prone to overfitting than absolute positions.
 
-These inductive biases, integrated into the GNS framework, converge to create a robust and efficient model. They serve to embed a priori knowledge about physical interactions into the learning process, thus enabling the framework to make accurate predictions, learn from each particle interaction, and generalize across various scenarios, all while maintaining computational efficiency and reducing the propensity to overfit to the training data.
+These inductive biases in the GNS framework combine to form a robust and efficient model. They serve to embed a priori knowledge about physical interactions into the learning process, thus enabling the framework to make accurate predictions, learn from each particle interaction, and generalize across various scenarios. The framework does all of this while maintaining computational efficiency and reducing the risk to overfit to the training data.
 
 ## Limitations
 
 While "Learning to Simulate Complex Physics with Graph Networks" by Sanchez-Gonzalez et al. presents innovative approaches to simulating complex physical systems using GNs, it also has several limitations:
 
-Firstly, the authors prioritized the precision of simulations, which, while yielding high-quality predictions, resulted in **considerable inference times**, potentially limiting rapid deployment in time-sensitive applications. This trade-off underlines a crucial area for future optimization to enhance the framework's practicality in scenarios where computational speed is of the essence.
+Firstly, the authors prioritized the precision of simulations, which, while yielding high-quality predictions, resulted in **considerable inference times**. This may be limiting rapid deployment in time-sensitive applications. Thus, this trade-off underlines a crucial area for future optimization to enhance the framework's practicality in scenarios where computational speed is of the essence.
 
 Secondly, the **assumption of a constant time step size** in the model can be limiting. Different physical scenarios might require varying time scales, necessitating retraining of the model for each desired time step, which can be impractical and resource-intensive.
 
@@ -674,7 +672,7 @@ Secondly, the **assumption of a constant time step size** in the model can be li
   <figcaption><p style="color: grey; font-size: smaller;">Inspired by Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div> -->
 <div style="text-align: center;">
-  <img src='https://hasosh.github.io/hasanevci.github.io/images/fixed-time-step.png' style="width: 400px;">
+  <img src='https://hasosh.github.io/hasanevci.github.io/images/fixed-time-step.png' style="height:auto; width:60%;">
   <figcaption><p style="color: grey; font-size: smaller;">Inspired by Sanchez-Gonzalez et al. (2020)</p></figcaption>
 </div>
 
@@ -686,30 +684,30 @@ It's important to note that these limitations do not diminish the significance o
 
 ## Review
 
-This paper presents a groundbreaking machine learning framework using Graph Network-based Simulators (GNS) for simulating complex systems, marking a notable advancement in physics-based simulations. The single GNS architecture has demonstrated exceptional capabilities, paving the way for a variety of applications in simulating complex physical phenomena.
+From the standpoint of a reviewer, this paper presents a groundbreaking machine learning framework using Graph Network-based Simulators (GNS) for simulating complex systems, marking a notable advancement in physics-based simulations. The single GNS architecture has demonstrated exceptional capabilities, paving the way for a variety of applications in simulating complex physical phenomena.
 
-The framework's strength lies in its ability to produce high-quality simulations, leveraging **inductive biases** to ensure focused computations and generalizable results. These biases, including the representation of physical systems as graphs and the use of shared node and edge functions, are instrumental in the framework's success. However, these advantages are counterbalanced by **limitations**, such as considerable inference times and challenges in simulating elastic materials. The assumption of a constant time step size and the dependency on extensive datasets for training also pose significant constraints.
+The framework's strength lies in its ability to produce high-quality simulations, leveraging **inductive biases** to ensure focused computations and generalizable results. These biases, including the representation of physical systems as graphs and the use of shared node and edge functions, are essential in the framework's success. However, these advantages are counterbalanced by **limitations**, such as considerable inference times and challenges in simulating elastic materials. The assumption of a constant time step size and the dependency on extensive datasets for training also pose significant constraints.
 
-The **versatility of the GNS framework** is evident from its potential application across various domains, ranging from fluid dynamics to solid mechanics. This flexibility suggests that the framework could be adapted to a wide array of complex physical systems, making it a valuable tool in diverse research and industrial settings.
+The **versatility of the GNS framework** is evident from its potential application across various domains, ranging from fluid dynamics to solid mechanics. This flexibility suggests that the framework could be adapted to a wide range of complex physical systems, making it a valuable tool in diverse research and industrial settings.
 
-Perhaps the most revolutionary aspect of this work is its **proof of concept that AI can simulate physics without explicit equations** describing the underlying phenomena. This represents a paradigm shift, moving beyond traditional equation-based models to data-driven, learned simulations. Such capability is a significant stride in AI, demonstrating its potential to infer complex physical behaviors from data alone.
+Perhaps the most revolutionary aspect of this work is that it acts as a **proof of concept that AI can simulate physics without explicit equations** describing the underlying phenomena. This represents a paradigm shift, moving beyond traditional equation-based models to data-driven, learned simulations. Such capability is a significant stride in AI, demonstrating its potential to infer complex physical behaviors from data alone.
 
-From the standpoint of a reviewer, the paper's exploration into **incorporating stronger, generic physical knowledge** like Hamiltonian mechanics and architecturally imposed symmetries is commendable. These areas offer avenues for enhancing the accuracy and flexibility of simulations. 
+The paper suggests potential enhancements to the framework by **incorporating more robust, generic physical knowledge**, like Hamiltonian mechanics and architecturally imposed symmetries. These suggestions hint at ways to potentially improve the accuracy and flexibility of simulations.
 
 **Efficiency optimization** emerges as a critical area, especially given the high computational demands of the GNS framework. Future work should focus on optimizing the parameterization and implementation of GNS computations, taking advantage of advances in parallel computing hardware. Such developments could greatly enhance the practicality and scalability of the framework.
 
-Moreover, the potential application of these learned, differentiable simulators in **solving inverse problems** broadens the framework's utility, offering solutions to a wide range of real-world challenges. This approach transcends mere forward prediction, allowing for more comprehensive problem-solving capabilities.
+Moreover, the potential application of these learned, differentiable simulators in **solving inverse problems** broadens the framework's utility, offering solutions to a wide range of real-world challenges. This approach goes beyond just predicting outcomes, enabling more extensive problem-solving capabilities.
 
-In summary, this paper represents a significant leap forward in generative models and equips the field of AI with enhanced capabilities for physical reasoning. As research progresses, these advancements promise to empower scientists and engineers with more effective tools for understanding and simulating complex physical systems.
+In summary, this paper marks a considerable advancement in the field of AI, particularly in enhancing capabilities for physical reasoning and simulation. It equips researchers with sophisticated tools for understanding and simulating complex physical systems. As research progresses, these developments hold the promise of providing scientists and engineers with more efficient and accurate methods for analyzing and modeling a wide range of physical phenomena.
 
 # Conclusion
 ------
 
-In summary, this analysis has focused on the paper "Learning to Simulate Complex Physics with Graph Networks" authored by Sanchez-Gonzalez et al., a notable contribution presented at the International Conference on Machine Learning (ICML) in 2020. We commenced our exploration by delving into the innovative application of GNs in simulating complex physical phenomena. The paper's authors adeptly harnessed the power of GNs to model intricate physical systems, a departure from traditional simulation methods.
+In summary, this blog post covers the paper “Learning to Simulate Complex Physics with Graph Networks” by Sanchez-Gonzalez et al., a significant work presented at the International Conference on Machine Learning (ICML) in 2020. Our review began with an examination of how Graph Networks (GNs) are used to simulate complex physical phenomena. The authors of this paper skillfully used GNs to model complex physical systems, moving away from traditional simulation methods.
 
-Notably, the utilization of GNs introduced an effective means of capturing and understanding the dynamics of complex physics. By leveraging message-passing mechanisms and a particle-based system, the authors demonstrated their approach's superiority in simulating various physical scenarios. This research breakthrough not only underscores the potential of machine learning techniques in scientific computing but also paves the way for more accurate and efficient simulations of complex real-world phenomena.
+A key aspect of this paper is the effective use of GNs for capturing the dynamics of complex physics. Through message-passing techniques and a particle-based approach, the authors showed how their method excels in simulating various physical situations. This breakthrough in research highlights the role of machine learning in scientific computing and leads to simulations that are more accurate and efficient for complex real-world phenomena.
 
-In conclusion, "Learning to Simulate Complex Physics with Graph Networks" by Sanchez-Gonzalez et al. marks a significant stride in the convergence of machine learning and physics. This work holds promise for enhancing our comprehension and predictive prowess in the domain of intricate physical systems.
+To conclude, the paper by Sanchez-Gonzalez et al. is an important step in bringing together machine learning and physics. It offers significant potential for improving our understanding and predictions of complex physical systems.
 
 
 # References
@@ -775,7 +773,7 @@ ML Explained - Aggregate Intellect - AI.SCIENCE, <a href="https://www.youtube.co
 Sanchez-Lengeling, et al., <a href="https://distill.pub/2021/gnn-intro/" style="color: blue;">"A Gentle Introduction to Graph Neural Networks"</a>, Distill, 2021.
 </span>
 
-All links were last followed on December 21, 2023.
+All links were last followed on February 10, 2024.
 
 -----
 
