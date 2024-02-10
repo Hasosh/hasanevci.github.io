@@ -2,7 +2,6 @@
 title: "Learning to Simulate Complex Physics with Graph Networks"
 date: 2024-02-10
 permalink: /posts/2024/02/seminar-blog-post/
-excerpt_separator: <!--more-->
 excerpt: "This is a blog post summarizing the paper 'Learning to Simulate Complex Physics with Graph Networks' (2020) by Sanchez-Gonzalez, Alvaro, et al. published in the International conference on machine learning. <img src='https://hasosh.github.io/hasanevci.github.io/images/front-page-stretched.png' style='width:500px'>"
 # excerpt: "This is a blog post summarizing the paper 'Learning to Simulate Complex Physics with Graph Networks' (2020) by Sanchez-Gonzalez, Alvaro, et al. published in the International conference on machine learning. <img src='/images/front-page-stretched.png' style='width:500px'>"
 collection: Machine Learning
