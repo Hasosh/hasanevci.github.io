@@ -93,13 +93,13 @@ As a student passionate about using machine learning to solve problems in the sc
 
 Feel free to explore this post in a way that suits your interests and familiarity with the topic. If you're already acquainted with certain aspects of this study, you might choose to jump to specific sections that capture your curiosity or fill gaps in your understanding. This blog is designed to accommodate both comprehensive reading and targeted exploration for seasoned readers.
 
-## Why do we even need to simulate complex physics?
+<span style="font-size: 24px;">Why do we even need to simulate complex physics?</span>
 
 The need for simulating complex physics arises across various scientific and engineering disciplines. These realistic simulators serve as invaluable tools that enable us to gain a profound understanding of intricate physical phenomena. Whether it's designing cutting-edge aerospace technologies, optimizing fluid dynamics in engineering, or unraveling the behavior of biological systems, simulations provide a controlled and accessible environment to explore and experiment. In some situations, they are also very cost-efficient. Consider the example of a car manufacturer assessing vehicle safety. Instead of the costly and resource-intensive process of physically crashing hundreds of cars, simulations offer a more efficient alternative here.
 
 In the absence of such simulations, many scientific inquiries and engineering endeavors would be severely hindered. Complex physics simulations offer the means to predict and visualize the behavior of systems that may be difficult or impossible to study directly. They empower us to test hypotheses, predict outcomes, and optimize designs, ultimately advancing our knowledge and technological capabilities. However, the traditional methods of creating these simulations present significant challenges and limitations.
 
-## What is the problem of traditional simulators?
+<span style="font-size: 24px;">What is the problem of traditional simulators?</span>
 
 While the importance of simulating complex physics is undeniable, the traditional approach to building simulators poses several challenges. These conventional simulators can be exceptionally costly, both in terms of time and resources. Developing a simulator often demands years of painstaking engineering effort, from designing accurate models to implementing computational algorithms.
 
@@ -107,7 +107,7 @@ One of the critical issues is the trade-off between generality and accuracy. Tra
 
 Even the best traditional simulators may fall short due to inherent limitations. Insufficient knowledge of the underlying physics or the complexities of approximating critical parameters can lead to inaccuracies. As a result, there is a compelling need for alternative approaches that can overcome these challenges and revolutionize the way we simulate complex physics. One such alternative is the utilization of machine learning, which has the potential to train simulators directly from observed data. It presents a transformative solution with **learned simulators**, which often have flexible frameworks capable of adapting to a wide array of problems. These simulators are not static; they can be continually refined for better performance and become more accurate as more data is fed into them, allowing for precise predictions and replication of physical phenomena. Among these, Graph Networks stand out for their potential in learned simulators, pointing to a future where simulating complex physics is more efficient and accurate.
 
-## How can you simulate complex physics with graph networks?
+<span style="font-size: 24px;">How can you simulate complex physics with graph networks?</span>
 
 Simulating complex physics with Graph Networks involves representing physical systems as graphs, with nodes and edges denoting entities and their interactions. GNs excel in capturing the complex relationships and dynamics within these structured data. By training GNs on observed data, they can learn the underlying physics and predict how physical properties evolve over time. This adaptability makes GNs a powerful tool for simulating a wide range of complex physical phenomena, from fluid dynamics to structural mechanics, without relying on predefined mathematical models. In essence, GNs revolutionize complex physics simulation by leveraging the flexibility and capacity of machine learning within the framework of graph-like representations.
 
@@ -533,7 +533,8 @@ This chapter presents an in-depth examination of the critical training methodolo
 
 2. **Normalization**: All input and target vectors are normalized elementwise to have zero mean and unit variance. This normalization is performed using online statistics computed during training, improving training speed but not significantly affecting the final performance.
 
-3. **Loss Function and Optimization**: The loss function is based on **one-step** $L_2$ **loss**, calculated on predicted per-particle accelerations from sampled particle state pairs $(x_i^{t_k}, x_i^{t_{k+1}})$
+3. **Loss Function and Optimization**: The loss function is the **one-step** $L_2$ **loss**, calculated on predicted per-particle accelerations from sampled particle state pairs $(x_i^{t_k}, x_i^{t_{k+1}})$:
+
 $$ 
   L(x_i^{t_k}, x_i^{t_{k+1}}; \theta) = \|d_{\theta}(x_i^{t_k}) - \ddot{p}_i^{t_k} \|^2 \nonumber
 $$
